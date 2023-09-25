@@ -1,0 +1,25 @@
+.feedContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    max-height: 100%;
+    margin: 0 auto;
+    flex-grow: 1; /* Ensure Feed container occupies all available space */
+  }
+  
+  .AddProfileFeed {
+    padding: 0 10px 0;
+    /* min-height:100px; */
+  }
+ 
+  .AddProfileFeed1 {
+    width: 100%;
+    flex: 0.20;
+  }
+  
+  .AddProfileFeed2 {
+    width: 100%;
+    flex: 0.80;
+  }
+  
+  

@@ -1,0 +1,68 @@
+import React from 'react';
+import { Button, Typography, makeStyles, Card, CardContent, IconButton } from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
+
+const useStyles = makeStyles((theme) => ({
+  skillcontainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: theme.spacing(1),
+    boxShadow: 'None',
+  },
+  skillButton: {
+    borderRadius: theme.spacing(5),
+    border: `2px solid ${theme.palette.grey[400]}`,
+    color: theme.palette.grey[400],
+    textTransform: 'none',
+    padding: theme.spacing(1, 2),
+    '&:hover': {
+      borderColor: theme.palette.grey[600],
+    },
+  },
+  
+}));
+
+const Skills = () => {
+  const classes = useStyles();
+  const skills = [
+    'JavaScript',
+    'React',
+    'CSS',
+    'HTML',
+    'Node.js',
+    'Python',
+    'TypeScript',
+    'Vue.js',
+    'Java',
+    'Django',
+  ];
+
+  return (
+    <Card className={classes.skillsCard}>
+      <CardContent>
+        <Typography variant="h6" className={classes.skillsTitle}>
+          Skills
+        </Typography>
+        <div className={classes.skillcontainer}>
+          {skills.map((skill, index) => (
+            <Button key={index} className={classes.skillButton}>
+              <Typography variant="body2" color="inherit">
+                {skill}
+              </Typography>
+            </Button>
+          ))}
+        </div>
+        <IconButton className={classes.addButton} aria-label="Add new skill">
+          <AddIcon />
+        </IconButton>
+        <IconButton className={classes.editButton} aria-label="Edit skills">
+          <EditIcon />
+        </IconButton>
+        
+      </CardContent>
+    </Card>
+  );
+};
+
+export default Skills;

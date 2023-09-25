@@ -1,0 +1,29 @@
+.feedContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    max-height: 100%;
+    margin: 0 auto;
+    flex-grow: 1; /* Ensure Feed container occupies all available space */
+  }
+  
+  .feedItem {
+    padding: 0 10px 0;
+    /* min-height:100px; */
+  }
+ 
+  .feedItem1 {
+    width: 100%;
+    flex: 0.20;
+  }
+  
+  .feedItem2 {
+    width: 100%;
+    flex: 0.55;
+  }
+  
+  .feedItem3 {
+    width: 100%;
+    flex: 0.25;
+  }
+  
